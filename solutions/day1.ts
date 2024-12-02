@@ -36,9 +36,8 @@ async function part2(): Promise<number> {
   let sum = 0;
 
   for (let i = 0; i < arr2.length; i++){
-    
     const num = map.get(arr2[i]);
-
+    
     if (num != undefined){
       map.set(arr2[i], num+1)
       continue;
