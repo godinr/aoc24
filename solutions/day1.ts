@@ -18,9 +18,7 @@ async function readAndSortInput(fileName: string){
   return [arr1, arr2];
 }
 
-async function part1(): Promise<number>{
-  
-  const [arr1, arr2] = await readAndSortInput("inputs/day1.txt");
+function part1(arr1: number[], arr2: number[]): number{
   let sum = 0;
   
   for (let i = 0; i < arr1.length; i++){
@@ -29,15 +27,13 @@ async function part1(): Promise<number>{
   return sum;
 }
 
-async function part2(): Promise<number> {
-
-  const [arr1, arr2] = await readAndSortInput("inputs/day1.txt");
+function part2(arr1: number[], arr2: number[]): number {
   const map = new Map<number, number>();
   let sum = 0;
 
   for (let i = 0; i < arr2.length; i++){
     const num = map.get(arr2[i]);
-    
+
     if (num != undefined){
       map.set(arr2[i], num+1)
       continue;
@@ -54,5 +50,6 @@ async function part2(): Promise<number> {
   return sum;
 }
 
-console.log(await part1());
-console.log(await part2());
+const [a1, a2] = await readAndSortInput("inputs/day1.txt");
+console.log(part1(a1,a2));
+console.log(part2(a1,a2));
