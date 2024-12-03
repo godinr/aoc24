@@ -15,9 +15,9 @@ function isSafe(values: string[]): boolean {
     
     for (let i = 0; i < values.length - 1; i++){
         const diff = Number(values[i]) - Number(values[i+1]); 
-        if (order === "inc" && !(diff <= -1 && diff >= -3)){
+        if (order === "inc" && (diff > -1 || diff < -3)){
             return false;
-        }else if (order === "dec" && !(diff >= 1 && diff <= 3)){
+        }else if (order === "dec" && (diff < 1 || diff > 3)){
             return false;
         }
     }
