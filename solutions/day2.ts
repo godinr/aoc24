@@ -1,4 +1,4 @@
-import readInput from "../util/readInput.ts";
+import { readInput } from "../util/readInput.ts";
 
 async function parseInput(fileName: string): Promise<string[]>{
     const input = await readInput(fileName, "\r\n");

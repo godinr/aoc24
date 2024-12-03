@@ -1,4 +1,4 @@
-import readInput from "../util/readInput.ts";
+import { readInput } from "../util/readInput.ts";
 
 async function readAndSortInput(fileName: string){
   const arr1: number[] = [];
