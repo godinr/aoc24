@@ -10,7 +10,7 @@ async function writeTemplateFile(dayNumber: number, template: string) {
 const dayNumber = Number(Deno.args[0]);
 
 const template = `
-import readInput from "../util/readInput.ts";
+import { readInput } from "../util/readInput.ts";
 
 async function parseInput(fileName: string): Promise<string[]>{
     const input = await readInput(fileName, "\\r\\n");
